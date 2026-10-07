@@ -1,0 +1,17 @@
+# Environment
+.venv/
+__pycache__/
+*.pyc
+
+# Experiment outputs: checkpoints (~113 MB each), predictions keyed by study ID, logs
+runs/
+*.pt
+*.log
+submission.csv
+
+# Competition data and anything derived from it never leaves this machine (Kaggle rules; reports stay local)
+data/
+*.dcm
+*.npy
+*.jsonl
+weak_labels.csv

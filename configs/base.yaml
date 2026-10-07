@@ -1,0 +1,24 @@
+data_root: E:/Documents/Projects/data/subset
+out_dir: E:/Documents/Projects/rsna-knee/runs/base
+weak_labels: null        # path to a report-derived label CSV, once one exists
+weak_weight: 0.5
+
+backbone: convnext_tiny
+pretrained: true
+grad_ckpt: true
+n_slices: 16
+crop: 224
+drop: 0.2
+
+folds: [0, 1, 2, 3, 4]
+epochs: 15
+batch_size: 2
+accum_steps: 4
+lr: 2.0e-4
+backbone_lr: 5.0e-5
+weight_decay: 0.05
+warmup_epochs: 1
+num_workers: 0           # each Windows worker loads its own torch+ROCm (~1 GB); too much for 16 GB RAM
+seed: 42
+resume: true             # skip folds whose checkpoint already exists in out_dir
+limit_studies: null      # e.g. 20 for a smoke test
