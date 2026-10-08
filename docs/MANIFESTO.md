@@ -206,4 +206,4 @@ baseline, then train on all 4,407 studies and submit.
 - [ ] Preprocess all 4,407 studies (about 3 hours) and train on the full set
 - [ ] Build the offline Kaggle notebook: upload `src/` and the fold checkpoints as a Kaggle Dataset, run `infer.py`,
       submit
-- [ ] Push the code to a private GitHub repository
+- [x] Push the code to a private GitHub repository
